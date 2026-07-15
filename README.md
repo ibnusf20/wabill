@@ -1,6 +1,6 @@
 # Wabill v1.2.0
 
-**WhatsApp Bulk Messaging** — Kirim pesen WhatsApp massal pake template dari data Excel/Google Sheets.
+Kirim pesen WhatsApp massal pake template dari data Excel/Google Sheets.
 
 ## Fitur
 
