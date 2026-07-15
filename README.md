@@ -1,14 +1,14 @@
 # Wabill v1.2.0
 
-Kirim pesen WhatsApp massal pake template dari data Excel/Google Sheets.
+Kirim pesan WhatsApp massal menggunakan template dari data Excel/Google Sheets.
 
 ## Fitur
 
-- Konek WhatsApp pake QR Code (multi-device)
+- Konek WhatsApp menggunakan QR Code (multi-device)
 - Paste data tabular — baris pertama = nama kolom, kolom pertama = nomor WA
-- Template pesen pake `{nama_kolom}` — otomatis ngisi dari data
-- Preview pesen sebelum kirim
-- Kirim massal otomatis jeda 4 detik per pesen
+- Template pesan menggunakan `{nama_kolom}` — otomatis ngisi dari data
+- Preview pesan sebelum kirim
+- Kirim massal otomatis jeda 4 detik per pesan
 - Tracking status realtime via Socket.IO
 - Auto-reply: balas otomatis data absensi dari Google Sheets
 
@@ -38,16 +38,16 @@ npm start
 node index.js
 ```
 
-## Cara Pake
+## Cara menggunakan
 
 1. Buka **`http://localhost:4000/`** di browser
 2. Klik **icon gear ⚙️** pojok kanan atas buat buka panel QR
-3. **Scan QR** pake WhatsApp kamu
+3. **Scan QR** menggunakan WhatsApp kamu
 4. **Paste data** dari Excel/Google Sheets ke textarea (kolom pertama = nomor WA)
 5. Klik **Format**
-6. Tulis **template pesen**, pake `{nama_kolom}` untuk placeholder
+6. Tulis **template pesan**, menggunakan `{nama_kolom}` untuk placeholder
 7. Klik **Preview** buat liat hasilnya
-8. Klik **Kirim** — pesen dikirim otomatis satu per satu
+8. Klik **Kirim** — pesan dikirim otomatis satu per satu
 
 ### Contoh Data
 
@@ -70,7 +70,7 @@ Halo Budi, tagihan kamu sebesar Rp50.000 udah jatuh tempo. Bayar segera ya.
 
 ## Auto-Reply Absensi
 
-Saat ada pesen masuk, Wabill otomatis:
+Saat ada pesan masuk, Wabill otomatis:
 1. Ambil nomor pengirim
 2. Hit API Google Apps Script: `GET /exec?whatsapp=<nomor>`
 3. Balas laporan absensi (nama, absen, libur, alpa, gaji, detail per tgl)
@@ -105,7 +105,7 @@ npm run build
 - Hapus folder `wabill_session/` trus restart server kalo mau scan ulang
 - Update Baileys kalo perlu: `npm install baileys@latest`
 
-**Gagal kirim pesen?**
+**Gagal kirim pesan?**
 - Pastikan nomor tujuan terdaftar di WhatsApp
 - Cek koneksi internet
 - Cek log di terminal/server
