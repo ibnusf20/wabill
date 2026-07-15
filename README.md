@@ -1,6 +1,8 @@
 # Wabill v1.2.0
 
 Kirim pesan WhatsApp massal menggunakan template dari data Excel/Google Sheets.
+<img width="1365" height="606" alt="Screenshot_2" src="https://github.com/user-attachments/assets/e93fb219-9eea-407c-905e-4f67564317d5" />
+<img width="1365" height="608" alt="Screenshot_3" src="https://github.com/user-attachments/assets/255fc013-9591-4837-b29b-e4a9fcd0eb0f" />
 
 ## Fitur
 
