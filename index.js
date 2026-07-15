@@ -1,10 +1,13 @@
 const http = require("http")
+const path = require("path")
 const hostname = 'localhost';
 const express = require("express")
 const qrcode = require("qrcode")
 const socketIO = require("socket.io")
 const { rm } = require("fs")
 const axios = require('axios')
+
+const BASE_DIR = (process.env.BASE_DIR || __dirname).trim()
 
 const { default: makeWASocket, DisconnectReason, useMultiFileAuthState, delay } = require('baileys')
 const pino = require('pino')
@@ -15,11 +18,11 @@ const server = http.createServer(app)
 const io = socketIO(server)
 
 app.use(express.json())
-app.use("/assets", express.static(__dirname + "/client/assets"))
+app.use("/assets", express.static(path.join(BASE_DIR, "client", "assets")))
 
 app.get("/", (req, res) => {
   res.sendFile("index.html", {
-    root: __dirname,
+    root: path.join(BASE_DIR, "client"),
   })
 })
 
