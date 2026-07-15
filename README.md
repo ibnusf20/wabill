@@ -112,4 +112,4 @@ npm run build
 
 ## Author
 
-**Ibnu Soffan Fauzi** — ibnusoffanf@gmail.com
+**Mas Ibeng**
