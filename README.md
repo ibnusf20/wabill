@@ -5,7 +5,7 @@ Kirim pesan WhatsApp massal menggunakan template dari data Excel/Google Sheets.
 ## Fitur
 
 - Konek WhatsApp menggunakan QR Code (multi-device)
-- Paste data tabular — baris pertama = nama kolom, kolom pertama = nomor WA
+- Paste data tabular — kolom pertama `no_wa`, kolom `nama`, kolom `isi_pesan`
 - Template pesan menggunakan `{nama_kolom}` — otomatis ngisi dari data
 - Preview pesan sebelum kirim
 - Kirim massal otomatis jeda 4 detik per pesan
@@ -43,7 +43,7 @@ node index.js
 1. Buka **`http://localhost:4000/`** di browser
 2. Klik **icon gear ⚙️** pojok kanan atas buat buka panel QR
 3. **Scan QR** menggunakan WhatsApp kamu
-4. **Paste data** dari Excel/Google Sheets ke textarea (kolom pertama = nomor WA)
+4. **Paste data** dari Excel/Google Sheets ke textarea (kolom `no_wa`, `nama`, `isi_pesan`)
 5. Klik **Format**
 6. Tulis **template pesan**, menggunakan `{nama_kolom}` untuk placeholder
 7. Klik **Preview** buat liat hasilnya
@@ -52,20 +52,20 @@ node index.js
 ### Contoh Data
 
 ```
-nama    no_wa       tagihan
-Budi    62123456    Rp50.000
-Siti    62123456    Rp75.000
+no_wa       nama    isi_pesan
+62123456    Budi    Tagihan kamu Rp50.000 udah jatuh tempo. Bayar segera ya.
+62123456    Siti    Tagihan kamu Rp75.000 udah jatuh tempo. Bayar segera ya.
 ```
 
 ### Contoh Template
 
 ```
-Halo {nama}, tagihan kamu sebesar {tagihan} udah jatuh tempo. Bayar segera ya.
+{isi_pesan}
 ```
 
 Hasilnya:
 ```
-Halo Budi, tagihan kamu sebesar Rp50.000 udah jatuh tempo. Bayar segera ya.
+Tagihan kamu Rp50.000 udah jatuh tempo. Bayar segera ya.
 ```
 
 ## Auto-Reply Absensi
